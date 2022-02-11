@@ -14,5 +14,7 @@ class Routes {
     Strings.login: (BuildContext context) => LoginScreen(),
     // dashboard
     Strings.dashboard: (BuildContext context) => DashboardScreen(),
+    // chat home page
+    Strings.addFriend: (BuildContext context) => DashboardScreen(),
   };
 }

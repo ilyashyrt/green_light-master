@@ -9,6 +9,8 @@ class Strings {
 
   static const String dashboard = "/dashboard";
 
+  static const String addFriend = "/addFriend";
+
   //General
   static const String appName = "Quiddy";
 }

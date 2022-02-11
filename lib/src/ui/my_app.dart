@@ -8,6 +8,7 @@ import 'package:quiddy/src/di/components/service_locator.dart';
 import 'package:quiddy/src/stores/language/language_store.dart';
 import 'package:quiddy/src/stores/theme/theme_store.dart';
 import 'package:quiddy/src/stores/user/user_store.dart';
+import 'package:quiddy/src/ui/dashboard/dashboard_main_screen.dart';
 import 'package:quiddy/src/ui/dashboard/dashboard_screen.dart';
 import 'package:quiddy/src/ui/login/login_screen.dart';
 import 'package:quiddy/src/ui/onboarding/onboarding_screen.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   final LanguageStore _languageStore = LanguageStore(getIt<Repository>());
   final ThemeStore _themeStore = ThemeStore(getIt<Repository>());
   final UserStore _userStore = UserStore(getIt<Repository>());
-  int whichPage = 0;
+  int whichPage = 2;
 
 // burası sonradan düzenlenecek firebase'den auth işlemi gerekmekte
   checkOnBoard() {
@@ -28,8 +29,10 @@ class MyApp extends StatelessWidget {
       return RegisterScreen();
     } else if (whichPage == 1) {
       return LoginScreen();
+    } else if (whichPage == 2) {
+      return DashboardMainScreen();
     } else {
-      return DashboardScreen();
+      print('booşş');
     }
   }
 

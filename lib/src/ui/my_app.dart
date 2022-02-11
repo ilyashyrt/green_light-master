@@ -8,7 +8,10 @@ import 'package:quiddy/src/di/components/service_locator.dart';
 import 'package:quiddy/src/stores/language/language_store.dart';
 import 'package:quiddy/src/stores/theme/theme_store.dart';
 import 'package:quiddy/src/stores/user/user_store.dart';
-import 'package:quiddy/src/ui/account_info/account_info_screen.dart';
+import 'package:quiddy/src/ui/dashboard/dashboard_screen.dart';
+import 'package:quiddy/src/ui/login/login_screen.dart';
+import 'package:quiddy/src/ui/onboarding/onboarding_screen.dart';
+import 'package:quiddy/src/ui/register/register_screen.dart';
 import 'package:quiddy/src/utils/locale/app_localization.dart';
 import 'package:quiddy/src/utils/routes/routes.dart';
 import 'package:provider/provider.dart';
@@ -17,6 +20,18 @@ class MyApp extends StatelessWidget {
   final LanguageStore _languageStore = LanguageStore(getIt<Repository>());
   final ThemeStore _themeStore = ThemeStore(getIt<Repository>());
   final UserStore _userStore = UserStore(getIt<Repository>());
+  int whichPage = 0;
+
+// burası sonradan düzenlenecek firebase'den auth işlemi gerekmekte
+  checkOnBoard() {
+    if (whichPage == 0) {
+      return RegisterScreen();
+    } else if (whichPage == 1) {
+      return LoginScreen();
+    } else {
+      return DashboardScreen();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +62,7 @@ class MyApp extends StatelessWidget {
               // Built-in localization of basic text for Cupertino widgets
               GlobalCupertinoLocalizations.delegate,
             ],
-            home: AccountInfoSecreen(),
+            home: checkOnBoard(),
           );
         },
       ),

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "757441214894",
+    "project_id": "green-light-bba08",
+    "storage_bucket": "green-light-bba08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757441214894:android:579bbb6477a4d0d0b0703f",
+        "android_client_info": {
+          "package_name": "com.example.green_light"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757441214894-caiks649ivkmj0icpf4ogh3m78j3mlnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcCIbKWCVgMekkPur3U5SIzVEfjySUYNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757441214894-caiks649ivkmj0icpf4ogh3m78j3mlnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

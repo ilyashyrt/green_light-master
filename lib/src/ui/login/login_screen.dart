@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greenlife/src/constants/colors.dart';
 import 'package:greenlife/src/constants/padding.dart';
+import 'package:greenlife/src/ui/video/video_screen.dart';
 import 'package:greenlife/src/utils/device/device_utils.dart';
 import 'package:greenlife/src/widgets/back_button_widget.dart';
 import 'package:greenlife/src/widgets/custom_textformfield_widget.dart';
@@ -45,7 +46,8 @@ class LoginScreen extends StatelessWidget {
                   Spacer(flex: 1,),
                   CustomTextFormField(icon: Icons.lock,hintText: "Password",textEditingController: passwordController,),
                   Spacer(flex: 9,),
-                  ElevatedButtonWidget(text: "Login", color: AppColors.appThemeGreenColor, width: DeviceUtils.getScaledWidth(context, 0.8), height: 50, onPressed: (){}),
+                  ElevatedButtonWidget(text: "Login", color: AppColors.appThemeGreenColor, width: DeviceUtils.getScaledWidth(context, 0.8), height: 50, onPressed: (){
+                  }),
                   Spacer(flex: 2,),
                   Text("Don't have an account? Sign up",style: TextStyle(color: AppColors.loginSignUpText),),
                   Spacer(flex: 2,)

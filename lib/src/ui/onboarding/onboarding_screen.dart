@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:quiddy/src/constants/strings.dart';
+import 'package:greenlife/src/constants/strings.dart';
 
 class OnboardingScreen extends StatelessWidget {
   @override

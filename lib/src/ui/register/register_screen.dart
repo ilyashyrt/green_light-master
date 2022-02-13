@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:greenlife/src/constants/colors.dart';
 import 'package:greenlife/src/constants/padding.dart';
 import 'package:greenlife/src/constants/strings.dart';
+import 'package:greenlife/src/ui/login/login_screen.dart';
 import 'package:greenlife/src/utils/device/device_utils.dart';
 import 'package:greenlife/src/widgets/back_button_widget.dart';
 import 'package:greenlife/src/widgets/custom_textformfield_widget.dart';
@@ -103,7 +104,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ],
                         ),
                         ElevatedButtonWidget(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: ((context) => LoginScreen())));
+
+                            },
                             text: "Register",
                             color: AppColors.appThemeGreenColor,
                             width: DeviceUtils.getScaledWidth(context, 0.8),

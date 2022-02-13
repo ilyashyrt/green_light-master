@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
-import 'package:quiddy/src/providers/firebase_provider.dart';
+import 'package:greenlife/src/providers/firebase_provider.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override

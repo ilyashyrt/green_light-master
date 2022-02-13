@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
 // burası sonradan düzenlenecek firebase'den auth işlemi gerekmekte
   checkOnBoard() {
     if (whichPage == 0) {
-      return OnboardingScreen();
+      return RegisterScreen();
     } else if (whichPage == 1) {
       return LoginScreen();
     } else if (whichPage == 2) {

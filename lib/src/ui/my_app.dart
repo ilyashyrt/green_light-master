@@ -15,7 +15,6 @@ import 'package:quiddy/src/ui/dashboard/dashboard_screen.dart';
 import 'package:quiddy/src/ui/login/login_screen.dart';
 import 'package:quiddy/src/ui/onboarding/onboarding_screen.dart';
 import 'package:quiddy/src/ui/register/register_screen.dart';
-import 'package:quiddy/src/utils/locale/app_localization.dart';
 import 'package:quiddy/src/utils/routes/routes.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -69,7 +68,7 @@ class _MyAppState extends State<MyApp> {
         builder: (context) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: Strings.appName,
+            title: 'app name',
             theme: _themeStore.darkMode ? themeDataDark : themeData,
             routes: Routes.routes,
             locale: Locale(_languageStore.locale),
@@ -78,7 +77,6 @@ class _MyAppState extends State<MyApp> {
                 .toList(),
             localizationsDelegates: [
               // A class which loads the translations from JSON files
-              AppLocalizations.delegate,
               // Built-in localization of basic text for Material widgets
               GlobalMaterialLocalizations.delegate,
               // Built-in localization for text direction LTR/RTL

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:quiddy/src/stores/error/error_store.dart';
-import 'package:quiddy/src/utils/locale/app_localization.dart';
 import 'package:mobx/mobx.dart';
 import 'package:validators/validators.dart';
 

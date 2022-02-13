@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:quiddy/src/data/sharedpref/shared_preference_helper.dart';
+import 'package:greenlife/src/data/sharedpref/shared_preference_helper.dart';
 
 class Repository {
   final SharedPreferenceHelper _sharedPrefsHelper;

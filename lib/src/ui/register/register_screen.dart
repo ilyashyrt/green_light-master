@@ -1,20 +1,126 @@
 import 'package:flutter/material.dart';
-import 'package:quiddy/src/constants/strings.dart';
+import 'package:greenlife/src/constants/colors.dart';
+import 'package:greenlife/src/constants/padding.dart';
+import 'package:greenlife/src/constants/strings.dart';
+import 'package:greenlife/src/utils/device/device_utils.dart';
+import 'package:greenlife/src/widgets/back_button_widget.dart';
+import 'package:greenlife/src/widgets/custom_textformfield_widget.dart';
+import 'package:greenlife/src/widgets/elevated_button_widget.dart';
+import 'package:greenlife/src/widgets/textfield_widget.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController dateOfBirthController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Register Screen'),
+      //resizeToAvoidBottomInset: false,
+      backgroundColor: AppColors.appThemeGreenColor,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          BackButtonWidget(),
+          Padding(
+            padding: Paddings.registerLeftPadding,
+            child: Text(
+              "Register to \nContinue",
+              style: TextStyle(
+                  fontSize: 28,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          Container(
+            width: DeviceUtils.getScaledWidth(context, 1),
+            height: DeviceUtils.getScaledHeight(context, 0.6),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                )),
+            child: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        CustomTextFormField(
+                          icon: Icons.person,
+                          hintText: "Name",
+                          textEditingController: nameController,
+                        ),
+                        CustomTextFormField(
+                          icon: Icons.email,
+                          hintText: "Email or phone number",
+                          textEditingController: emailController,
+                        ),
+                        CustomTextFormField(
+                          icon: Icons.location_on,
+                          hintText: "Date of birth",
+                          textEditingController: dateOfBirthController,
+                        ),
+                        CustomTextFormField(
+                          icon: Icons.lock,
+                          hintText: "Password",
+                          textEditingController: passwordController,
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: Paddings.registerAgreementLeftPadding,
+                              child: Checkbox(
+                                checkColor: AppColors.appThemeGreenColor,
+                                activeColor: AppColors.textFieldBackgroundColor,
+                                side: BorderSide(
+                                    style: BorderStyle.solid,
+                                    color: AppColors.appThemeGreenColor),
+                                value: isChecked,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    isChecked = value!;
+                                  });
+                                },
+                              ),
+                            ),
+                            Text(
+                              "I agree with the Terms of Service & privacy policy",
+                              style: TextStyle(
+                                  color: AppColors.registerAgreementTextColor,
+                                  fontSize: 13),
+                            ),
+                          ],
+                        ),
+                        ElevatedButtonWidget(
+                            onPressed: () {},
+                            text: "Register",
+                            color: AppColors.appThemeGreenColor,
+                            width: DeviceUtils.getScaledWidth(context, 0.8),
+                            height: 50),
+                      ],
+                    ),
+                  ]),
+            ),
+          ),
+        ],
       ),
-      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text('sayfa yönlendirmesi için örnek buton'),
-        Center(
-          child: FloatingActionButton(
-              onPressed: () => Navigator.pushNamed(context, Strings.dashboard)),
-        ),
-      ]),
     );
   }
 }
+
+
+
+
+
+//!Navigator.pushNamed(context, Strings.dashboard)

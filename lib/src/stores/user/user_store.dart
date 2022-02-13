@@ -1,4 +1,4 @@
-import 'package:quiddy/src/stores/error/error_store.dart';
+import 'package:greenlife/src/stores/error/error_store.dart';
 import 'package:mobx/mobx.dart';
 
 import '../../data/repository.dart';

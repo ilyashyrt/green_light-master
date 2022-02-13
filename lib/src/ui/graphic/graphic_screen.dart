@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quiddy/src/constants/assets.dart';
-import 'package:quiddy/src/constants/colors.dart';
-import 'package:quiddy/src/constants/strings.dart';
-import 'package:quiddy/src/custom/for_text.dart';
-import 'package:quiddy/src/ui/graphic/source/photo_list.dart';
-import 'package:quiddy/src/utils/device/device_utils.dart';
+import 'package:greenlife/src/constants/assets.dart';
+import 'package:greenlife/src/constants/strings.dart';
+import 'package:greenlife/src/custom/for_text.dart';
+import 'package:greenlife/src/ui/graphic/source/photo_list.dart';
+import 'package:greenlife/src/utils/device/device_utils.dart';
 
 class GraphicScreen extends StatelessWidget {
   const GraphicScreen({Key? key}) : super(key: key);

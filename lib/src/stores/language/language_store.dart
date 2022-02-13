@@ -1,6 +1,6 @@
-import 'package:quiddy/src/data/repository.dart';
-import 'package:quiddy/src/models/language/Language.dart';
-import 'package:quiddy/src/stores/error/error_store.dart';
+import 'package:greenlife/src/data/repository.dart';
+import 'package:greenlife/src/models/language/Language.dart';
+import 'package:greenlife/src/stores/error/error_store.dart';
 import 'package:mobx/mobx.dart';
 
 part 'language_store.g.dart';

@@ -18,4 +18,16 @@ class Strings {
   static const String promiseTitle = "I promise to leave";
   static const String video = "/video";
   static const String graphic = "/graphic";
+  static const String registerToContinueText = "Register to \nContinue";
+  static const String nameText = "Name";
+  static const String emailOrPhoneText = "Email or phone number";
+  static const String dateOfBirthText = "Date of birth";
+  static const String passwordText = "Password";
+  static const String agreementText = "I agree with the Terms of Service & privacy policy";
+  static const String registerText = "Register";
+  static const String welcomeBackText = "WELCOME BACK";
+  static const String emailOrUsernameText = "Email or username";
+  static const String loginText = "Login";
+  static const String signUpText = "Don't have an account? Sign up";
+  static const String videoPlayerText = "Video Player";
 }

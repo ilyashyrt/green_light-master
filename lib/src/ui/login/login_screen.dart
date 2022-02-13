@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greenlife/src/constants/colors.dart';
 import 'package:greenlife/src/constants/padding.dart';
+import 'package:greenlife/src/constants/strings.dart';
 import 'package:greenlife/src/ui/video/video_screen.dart';
 import 'package:greenlife/src/utils/device/device_utils.dart';
 import 'package:greenlife/src/widgets/back_button_widget.dart';
@@ -22,7 +23,7 @@ class LoginScreen extends StatelessWidget {
             BackButtonWidget(),
             Center(
               child: Text(
-                "WELCOME BACK",
+                Strings.welcomeBackText,
                 style: TextStyle(
                     fontSize: 32,
                     color: Colors.white,
@@ -42,14 +43,14 @@ class LoginScreen extends StatelessWidget {
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Spacer(flex: 2,),
-                  CustomTextFormField(icon: Icons.mail,hintText: "Email or username",textEditingController: emailController,),
+                  CustomTextFormField(icon: Icons.mail,hintText: Strings.emailOrUsernameText,textEditingController: emailController,),
                   Spacer(flex: 1,),
-                  CustomTextFormField(icon: Icons.lock,hintText: "Password",textEditingController: passwordController,),
+                  CustomTextFormField(icon: Icons.lock,hintText: Strings.passwordText,textEditingController: passwordController,),
                   Spacer(flex: 9,),
-                  ElevatedButtonWidget(text: "Login", color: AppColors.appThemeGreenColor, width: DeviceUtils.getScaledWidth(context, 0.8), height: 50, onPressed: (){
+                  ElevatedButtonWidget(text: Strings.loginText, color: AppColors.appThemeGreenColor, width: DeviceUtils.getScaledWidth(context, 0.8), height: 50, onPressed: (){
                   }),
                   Spacer(flex: 2,),
-                  Text("Don't have an account? Sign up",style: TextStyle(color: AppColors.loginSignUpText),),
+                  Text(Strings.signUpText,style: TextStyle(color: AppColors.loginSignUpText),),
                   Spacer(flex: 2,)
                 ]),
             ),

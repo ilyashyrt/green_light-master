@@ -35,7 +35,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           Padding(
             padding: Paddings.registerLeftPadding,
             child: Text(
-              "Register to \nContinue",
+              Strings.registerToContinueText,
               style: TextStyle(
                   fontSize: 28,
                   color: Colors.white,
@@ -59,22 +59,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       children: [
                         CustomTextFormField(
                           icon: Icons.person,
-                          hintText: "Name",
+                          hintText: Strings.nameText,
                           textEditingController: nameController,
                         ),
                         CustomTextFormField(
                           icon: Icons.email,
-                          hintText: "Email or phone number",
+                          hintText: Strings.emailOrPhoneText,
                           textEditingController: emailController,
                         ),
                         CustomTextFormField(
                           icon: Icons.location_on,
-                          hintText: "Date of birth",
+                          hintText: Strings.dateOfBirthText,
                           textEditingController: dateOfBirthController,
                         ),
                         CustomTextFormField(
                           icon: Icons.lock,
-                          hintText: "Password",
+                          hintText: Strings.passwordText,
                           textEditingController: passwordController,
                         ),
                         Row(
@@ -96,7 +96,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             ),
                             Text(
-                              "I agree with the Terms of Service & privacy policy",
+                              Strings.agreementText,
                               style: TextStyle(
                                   color: AppColors.registerAgreementTextColor,
                                   fontSize: 13),
@@ -108,7 +108,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               Navigator.push(context, MaterialPageRoute(builder: ((context) => LoginScreen())));
 
                             },
-                            text: "Register",
+                            text: Strings.registerText,
                             color: AppColors.appThemeGreenColor,
                             width: DeviceUtils.getScaledWidth(context, 0.8),
                             height: 50),

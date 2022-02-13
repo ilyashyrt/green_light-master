@@ -27,7 +27,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               return Text(snapshot.data['isim']);
             },
           ),
-          Center(child: Text('dashboard safası'))
+          Center(child: Text('dashboard sayfası'))
         ],
       ),
     );

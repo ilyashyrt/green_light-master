@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greenlife/src/constants/strings.dart';
 import 'package:greenlife/src/ui/video/source/video_items.dart';
 import 'package:video_player/video_player.dart';
 
@@ -10,7 +11,7 @@ class VideoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Video Player'),
+        title: Text(Strings.videoPlayerText),
       ),
       body: ListView(
         children: [

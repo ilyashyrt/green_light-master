@@ -1,12 +1,12 @@
 import 'package:get_it/get_it.dart';
-import 'package:quiddy/src/data/repository.dart';
-import 'package:quiddy/src/data/sharedpref/shared_preference_helper.dart';
-import 'package:quiddy/src/di/module/local_module.dart';
-import 'package:quiddy/src/stores/error/error_store.dart';
-import 'package:quiddy/src/stores/form/form_store.dart';
-import 'package:quiddy/src/stores/language/language_store.dart';
-import 'package:quiddy/src/stores/theme/theme_store.dart';
-import 'package:quiddy/src/stores/user/user_store.dart';
+import 'package:greenlife/src/data/repository.dart';
+import 'package:greenlife/src/data/sharedpref/shared_preference_helper.dart';
+import 'package:greenlife/src/di/module/local_module.dart';
+import 'package:greenlife/src/stores/error/error_store.dart';
+import 'package:greenlife/src/stores/form/form_store.dart';
+import 'package:greenlife/src/stores/language/language_store.dart';
+import 'package:greenlife/src/stores/theme/theme_store.dart';
+import 'package:greenlife/src/stores/user/user_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final getIt = GetIt.instance;

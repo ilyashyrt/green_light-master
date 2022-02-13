@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiddy/src/constants/assets.dart';
-import 'package:quiddy/src/ui/video/video_screen.dart';
-import 'package:quiddy/src/utils/device/device_utils.dart';
+import 'package:greenlife/src/constants/assets.dart';
+import 'package:greenlife/src/ui/video/video_screen.dart';
+import 'package:greenlife/src/utils/device/device_utils.dart';
 
 List<String> images = [
   Assets.profilPicture,

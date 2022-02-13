@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiddy/src/ui/video/source/video_items.dart';
+import 'package:greenlife/src/ui/video/source/video_items.dart';
 import 'package:video_player/video_player.dart';
 
 // ignore: must_be_immutable

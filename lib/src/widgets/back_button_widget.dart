@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiddy/src/constants/colors.dart';
-import 'package:quiddy/src/constants/padding.dart';
+import 'package:greenlife/src/constants/colors.dart';
+import 'package:greenlife/src/constants/padding.dart';
 
 class BackButtonWidget extends StatelessWidget {
   const BackButtonWidget({Key? key}) : super(key: key);

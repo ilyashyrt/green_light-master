@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiddy/src/constants/colors.dart';
+import 'package:greenlife/src/constants/colors.dart';
 
 class BottomNavigatorBarWidget extends StatefulWidget {
   const BottomNavigatorBarWidget(

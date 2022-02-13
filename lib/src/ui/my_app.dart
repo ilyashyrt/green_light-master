@@ -13,7 +13,7 @@ import 'package:quiddy/src/ui/dashboard/dashboard_screen.dart';
 import 'package:quiddy/src/ui/login/login_screen.dart';
 import 'package:quiddy/src/ui/onboarding/onboarding_screen.dart';
 import 'package:quiddy/src/ui/register/register_screen.dart';
-import 'package:quiddy/src/utils/locale/app_localization.dart';
+
 import 'package:quiddy/src/utils/routes/routes.dart';
 import 'package:provider/provider.dart';
 
@@ -57,7 +57,6 @@ class MyApp extends StatelessWidget {
                 .toList(),
             localizationsDelegates: [
               // A class which loads the translations from JSON files
-              AppLocalizations.delegate,
               // Built-in localization of basic text for Material widgets
               GlobalMaterialLocalizations.delegate,
               // Built-in localization for text direction LTR/RTL

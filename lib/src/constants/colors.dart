@@ -15,4 +15,11 @@ class AppColors {
     800: const Color.fromRGBO(0, 180, 70, 1),
     900: const Color.fromRGBO(0, 190, 75, 1)
   };
+
+  static const Color appThemeGreenColor = Color.fromRGBO(123, 196, 178, 1);
+  static const Color textFieldBackgroundColor = Color.fromRGBO(245, 251, 255, 1);
+  static const Color textFieldTextColor = Color.fromRGBO(34, 34, 34, 0.54);
+  static const Color registerAgreementTextColor = Color.fromRGBO(149, 156, 180, 1);
+  static const Color iconButtonIconColor = Color.fromRGBO(3, 4, 91, 1);
+  static const Color loginSignUpText = Color.fromRGBO(151, 167, 179, 1);
 }

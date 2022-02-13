@@ -1,30 +1,48 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:greenlife/src/constants/app_theme.dart';
-import 'package:greenlife/src/constants/strings.dart';
-import 'package:greenlife/src/data/repository.dart';
-import 'package:greenlife/src/di/components/service_locator.dart';
-import 'package:greenlife/src/stores/language/language_store.dart';
-import 'package:greenlife/src/stores/theme/theme_store.dart';
-import 'package:greenlife/src/stores/user/user_store.dart';
-import 'package:greenlife/src/ui/dashboard/dashboard_main_screen.dart';
-import 'package:greenlife/src/ui/dashboard/dashboard_screen.dart';
-import 'package:greenlife/src/ui/graphic/graphic_screen.dart';
-import 'package:greenlife/src/ui/login/login_screen.dart';
-import 'package:greenlife/src/utils/routes/routes.dart';
+import 'package:quiddy/src/constants/app_theme.dart';
+import 'package:quiddy/src/constants/strings.dart';
+import 'package:quiddy/src/data/repository.dart';
+import 'package:quiddy/src/di/components/service_locator.dart';
+import 'package:quiddy/src/providers/firebase_provider.dart';
+import 'package:quiddy/src/stores/language/language_store.dart';
+import 'package:quiddy/src/stores/theme/theme_store.dart';
+import 'package:quiddy/src/stores/user/user_store.dart';
+import 'package:quiddy/src/ui/dashboard/dashboard_main_screen.dart';
+import 'package:quiddy/src/ui/dashboard/dashboard_screen.dart';
+import 'package:quiddy/src/ui/login/login_screen.dart';
+import 'package:quiddy/src/ui/onboarding/onboarding_screen.dart';
+import 'package:quiddy/src/ui/register/register_screen.dart';
+import 'package:quiddy/src/utils/routes/routes.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  final SharedPreferences prefs;
+
+  const MyApp({Key? key, required this.prefs}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   final LanguageStore _languageStore = LanguageStore(getIt<Repository>());
+
   final ThemeStore _themeStore = ThemeStore(getIt<Repository>());
+
   final UserStore _userStore = UserStore(getIt<Repository>());
-  int whichPage = 2;
+
+  final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+
+  int whichPage = 0;
 
 // burası sonradan düzenlenecek firebase'den auth işlemi gerekmekte
   checkOnBoard() {
     if (whichPage == 0) {
-      return GraphicScreen();
+      return OnboardingScreen();
     } else if (whichPage == 1) {
       return LoginScreen();
     } else if (whichPage == 2) {
@@ -39,14 +57,18 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         Provider<ThemeStore>(create: (_) => _themeStore),
-        Provider<LanguageStore>(create: (_) => _languageStore)
+        Provider<LanguageStore>(create: (_) => _languageStore),
+        Provider<FirebaseProvider>(
+          create: (_) =>
+              FirebaseProvider(firebaseFirestore: this.firebaseFirestore),
+        )
       ],
       child: Observer(
         name: 'global-observer',
         builder: (context) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: Strings.appName,
+            title: 'app name',
             theme: _themeStore.darkMode ? themeDataDark : themeData,
             routes: Routes.routes,
             locale: Locale(_languageStore.locale),

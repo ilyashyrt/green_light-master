@@ -38,12 +38,12 @@ class _MyAppState extends State<MyApp> {
 
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
-  int whichPage = 2;
+  int whichPage = 0;
 
 // burası sonradan düzenlenecek firebase'den auth işlemi gerekmekte
   checkOnBoard() {
     if (whichPage == 0) {
-      return RegisterScreen();
+      return OnboardingScreen();
     } else if (whichPage == 1) {
       return LoginScreen();
     } else if (whichPage == 2) {

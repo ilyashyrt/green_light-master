@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiddy/src/ui/dashboard/dashboard_screen.dart';
-import 'package:quiddy/src/ui/login/login_screen.dart';
-import 'package:quiddy/src/ui/register/register_screen.dart';
+import 'package:greenlife/src/ui/dashboard/dashboard_screen.dart';
+import 'package:greenlife/src/ui/login/login_screen.dart';
+import 'package:greenlife/src/ui/register/register_screen.dart';
 
 class DashboardMainScreen extends StatefulWidget {
   @override

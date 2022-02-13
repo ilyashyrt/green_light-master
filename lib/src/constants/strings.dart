@@ -7,7 +7,7 @@ class Strings {
   static const String login = "/login";
   static const String dashboard = "/dashboard";
   //General
-  static const String appName = "Quiddy";
+  static const String appName = "GreenLife";
   static const String promiseTitle = "I promise to leave";
   static const String video = "/video";
   static const String graphic = "/graphic";

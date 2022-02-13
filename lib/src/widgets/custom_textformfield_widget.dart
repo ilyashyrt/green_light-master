@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:quiddy/src/constants/colors.dart';
-import 'package:quiddy/src/constants/padding.dart';
-import 'package:quiddy/src/utils/device/device_utils.dart';
+import 'package:greenlife/src/constants/colors.dart';
+import 'package:greenlife/src/constants/padding.dart';
+import 'package:greenlife/src/utils/device/device_utils.dart';
 
 class CustomTextFormField extends StatelessWidget {
   TextEditingController? textEditingController;

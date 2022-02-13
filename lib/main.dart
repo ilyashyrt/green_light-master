@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiddy/src/di/components/service_locator.dart';
-import 'package:quiddy/src/ui/my_app.dart';
+import 'package:greenlife/src/di/components/service_locator.dart';
+import 'package:greenlife/src/ui/my_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:quiddy/src/constants/colors.dart';
-import 'package:quiddy/src/constants/padding.dart';
-import 'package:quiddy/src/utils/device/device_utils.dart';
-import 'package:quiddy/src/widgets/back_button_widget.dart';
-import 'package:quiddy/src/widgets/custom_textformfield_widget.dart';
-import 'package:quiddy/src/widgets/elevated_button_widget.dart';
+import 'package:greenlife/src/constants/colors.dart';
+import 'package:greenlife/src/constants/padding.dart';
+import 'package:greenlife/src/utils/device/device_utils.dart';
+import 'package:greenlife/src/widgets/back_button_widget.dart';
+import 'package:greenlife/src/widgets/custom_textformfield_widget.dart';
+import 'package:greenlife/src/widgets/elevated_button_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
